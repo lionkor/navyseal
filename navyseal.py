@@ -10,7 +10,7 @@ while running:
 
     while mode != 1 and mode != 2 and mode != 3:
         try:
-            mode = int (input ("Choose mode: \n    1. NavySeal to Normal\n    2. Normal to NavySeal\n    3. Exit\nMode [1,2]: "))
+            mode = int (input ("Choose mode: \n    1. NavySeal to Normal\n    2. Normal to NavySeal\n    3. Exit\nMode [1,2,3]: "))
         except Exception:
             mode = -1
 
@@ -56,6 +56,8 @@ while running:
 
     elif mode == 2:
         for c in text:
+            if c not in nato.keys ():
+                continue
             c = c.upper ()
             if c == " ":
                 result += "."
